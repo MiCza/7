@@ -1,0 +1,285 @@
+$grid-columns: 12;
+
+@media (max-width: 1650px) {
+
+	@for $i from 1 through $grid-columns {
+  .col-ms-#{$i} {
+    width: 100% / 12 * $i;
+  }
+}
+
+// HEADER
+#menu-toggle {
+  display: block;
+  left: 10px;
+  position: fixed;
+  top: 10px;
+  user-select: none;
+  z-index: 1;
+}
+
+#menu-toggle input {
+	cursor: pointer;
+  	display: block;
+  	height: 32px;
+  	opacity: 0;
+  	position: absolute;
+  	width: 40px;
+  	z-index: 2;
+}
+
+#menu-toggle span {
+	background: grey;
+  	border-radius: 3px;
+  	display: block;
+  	height: 5px;
+  	margin-bottom: 5px;
+  	position: relative;
+  	width: 30px;
+  	z-index: 1;
+}
+
+#menu-toggle input:checked ~ ul {
+  transform: none;
+}
+
+#menu {
+	background: rgba(0, 0, 0, 0.8);
+	border-radius: 2%;
+	margin: -100px 0 0 -50px;
+	font-size: 1.2em;
+	line-height: 1.8em;
+	padding: 50px;
+	padding-top: 120px;
+	position: absolute;
+	text-align: left;
+	transform: translate(-100%, 0);
+	transition: transform 0.2s;
+	width: 200px;
+}
+
+.nav-links {
+	a {
+		color: grey;
+		font-size: 0.9em;
+		line-height: 1em;
+		margin: 5%;
+
+		&:hover {
+			color: #fff;
+		}
+	}
+
+	li {
+		display: block;
+	}
+}
+
+.header {
+	margin-bottom: 100px;
+	padding-top: 15px;
+}
+// HEADER-END
+
+//HOME
+.home {
+	height: 500px;
+	text-align: center;
+
+	h2 {
+		font-size: 20px;
+	}
+
+	h1 {
+		font-size: 24px;
+	}
+}
+
+.home-btn {
+	height: 45px;
+	width: 150px;
+
+	a {
+		font-size: 1em;
+	}
+}
+//HOME-END
+
+//PORTFOLIO
+.portfolio {
+	.col-ms-6 {
+		float: left;
+	}
+}
+}
+//PORTFOLIO-END
+
+
+//TEAM
+.team {
+	.col-ms-6 {
+		float: left;
+	}
+
+	i {
+		margin-bottom: 50px;
+	}
+}
+//TEAM-END
+
+//---------------------------------------------------------
+
+@media (max-width: 1100px) {
+
+	@for $i from 1 through $grid-columns {
+  .col-s-#{$i} {
+    width: 100% / 12 * $i;
+  }
+}
+
+//PORTFOLIO
+	.portfolio img {
+		width: 100%;
+	}
+
+	.portfolio h3 {
+		background-color: grey;
+		border: 1px solid grey;
+		border-radius: 10%;
+		color: #333;
+	}
+
+	.folio-title {
+	h2 {
+		font-size: 1.2em;
+	}
+
+	p {
+		font-size: 0.9em;
+	}
+}
+//PORTFOLIO-END
+
+//ABOUT
+.col-offset-4 {
+	margin-left: 0;
+}
+
+.about {
+	text-align: center;
+
+	img {
+		width: 80%;
+	}
+
+	.row {
+		margin-top: 30px;
+	}
+}
+
+.text-left h3, .text-right h3 {
+	font-size: 0.9em;
+}
+
+.text-left p, .text-right p {
+	font-size: .7em;
+}
+
+.text-left h3, .text-left p {
+	text-align: right;
+}
+
+.text-right h3, .text-right p {
+	text-align: left;
+}
+
+.about-line::after {
+    display: none;
+}
+//ABOUT-END
+
+//TEAM
+.team {
+	float: none;
+
+	img {
+		width: 90%;
+	}
+
+	i {
+		margin-bottom: 50px;
+	}
+}
+.title {
+	h2 {
+		font-size: 1.2em
+	}
+
+	p {
+		margin-bottom: 50px;
+	}
+}
+//TEAM-END
+
+//ENGINES
+.engines img {
+	display: block;
+	margin: 15px auto;
+}
+// ENGINES-END
+
+//CONTACT
+form {
+	max-width: 700px;
+}
+
+#form-name, #form-email, #form-subject {
+	height: 30px;
+}
+
+#form-message {
+	height: 150px;
+}
+
+#form-name, #form-email, #form-subject, #form-message {
+	margin-top: 20px;
+}
+
+.contact {
+	height: 600px;
+
+	h2 {
+		padding-top: 50px;
+	}
+}
+
+.contact-form-half {
+	float: none;
+	margin: 0 auto;
+	width: 80%;
+}
+
+.contact-btn {
+	font-size: .9em;
+	height: 40px;
+	margin-bottom: 50px;
+	width: 150px;
+}
+// CONTACT-END
+
+//FOOTER
+.footer {
+	p {
+		display: block;
+		font-size: 1em;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.icon-btn {
+		display: inline-block;
+		margin-left: 30px;
+		text-align: center;
+	}
+}
+}
+//FOOTER-END
